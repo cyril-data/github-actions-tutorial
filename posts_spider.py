@@ -1,7 +1,10 @@
 
 import scrapy
 
+
 class VideosSpider(scrapy.Spider):
+
+
     name = "VideosSpider"
 
     start_urls = ["https://towardsdatascience.com/search?q=github%20actions"]
@@ -9,7 +12,7 @@ class VideosSpider(scrapy.Spider):
     unique_urls = set()
 
     def parse(self, response):
-        for tag in response.css(".u-baseColor--buttonNormal"): 
+        for tag in response.css(".u-baseColor--buttonNormal"):
             post_url = tag.css("::attr(href)").extract_first()
             if post_url:
                 post_url = post_url.split("?")[0]
