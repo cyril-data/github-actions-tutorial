@@ -1,5 +1,6 @@
 name: BRANCH develop same repo                             
-on: push
+on: 
+  push:
     branches: [develop]
 jobs:        
   use-your-own-action:
