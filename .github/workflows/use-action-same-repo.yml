@@ -1,5 +1,7 @@
 name: Action from the same repo                                    
-on: push                                                  
+on: push    
+    branches:
+      - develop
 jobs:        
   use-your-own-action:
     name: Say Hi using your own action
@@ -7,6 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         
-      - uses: ./
-        with:
-         user: 'Déborah'
+      # - uses: ./
+      #   with:
+      #    user: 'Déborah'
