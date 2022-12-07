@@ -4,7 +4,6 @@ import scrapy
 
 class VideosSpider(scrapy.Spider):
 
-
     name = "VideosSpider"
 
     start_urls = ["https://towardsdatascience.com/search?q=github%20actions"]
